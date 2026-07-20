@@ -1,25 +1,25 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Collections;
+import java.util.List;
 
 public  class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
         ArrayList<String> listadoElegidos = new ArrayList<>();
 
-        // Crear la lista inicial (5 personas)
-        listadoElegidos.add("Ada Lovelace");
-        listadoElegidos.add("Neil Armstrong");
-        listadoElegidos.add("Marie Curie");
-        listadoElegidos.add("Carl Sagan");
-        listadoElegidos.add("Valentina Tereshkova");
+        listadoElegidos.addAll(List.of(
+                "Ada Lovelace",
+                "Neil Armstrong",
+                "Marie Curie",
+                "Carl Sagan",
+                "Valentina Tereshkova"
+        ));
 
         System.out.println("Lista inicial:");
         System.out.println(listadoElegidos);
 
         // Los puestos 2 y 3 se dan de baja
-        // (índices 1 y 2)
-        listadoElegidos.remove(2); // primero el índice mayor
+        listadoElegidos.remove(2);
         listadoElegidos.remove(1);
 
         // Entra personaje X en el puesto 2

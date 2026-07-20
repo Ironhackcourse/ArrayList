@@ -7,21 +7,20 @@ public class Ejercicio_3 {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> elementos = new ArrayList<>();
 
-        String respuesta;
+        String respuesta = "";
 
         System.out.println("Introduce elementos típicos de Sant Jordi.");
         System.out.println("Escribe 'salir' para terminar.");
 
-        while (true) {
+        while (!respuesta.equalsIgnoreCase("salir")) {
 
             System.out.print("Elemento: ");
             respuesta = sc.nextLine();
 
-            if (respuesta.equalsIgnoreCase("salir")) {
-                break;
-            }
+            if (!respuesta.equalsIgnoreCase("salir")) {
 
             elementos.add(respuesta);
+            }
         }
 
         System.out.println("\nElementos introducidos:");
